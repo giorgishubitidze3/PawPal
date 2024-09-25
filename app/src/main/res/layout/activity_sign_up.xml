@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textPersonName"
             />
 
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Name"
+            android:hint="@string/name"
             android:inputType="textPersonName"
             />
 
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Surname"
+            android:hint="@string/surname"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             />
 
@@ -149,7 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"
-            android:hint="Phone"
+            android:hint="@string/phone"
             android:inputType="phone"
             />
 
@@ -161,7 +161,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginHorizontal="40dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -175,7 +175,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

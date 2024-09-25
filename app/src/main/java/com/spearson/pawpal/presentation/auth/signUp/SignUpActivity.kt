@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.spearson.pawpal.MainActivity
 import com.spearson.pawpal.R
@@ -39,6 +40,11 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        val database = FirebaseDatabase.getInstance("https://paw-pal-436516-default-rtdb.europe-west1.firebasedatabase.app")
+        val usersRef = database.getReference("users")
+
+
+
         binding.signInBtn.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
@@ -63,16 +69,18 @@ class SignUpActivity : AppCompatActivity() {
                             "mail" to mail,
                             "name" to name,
                             "surname" to surname,
+                            "phone" to phone,
+                            "profilePic" to "default"
                         )
 
 
-//                        usersRef.child(currentUserId).setValue(user)
-//                            .addOnSuccessListener {
-//                                Log.d("Firebase", "User1 data written successfully")
-//                            }
-//                            .addOnFailureListener { exception ->
-//                                Log.e("Firebase", "Failed to write user1 data", exception)
-//                            }
+                        usersRef.child(currentUserId).setValue(user)
+                            .addOnSuccessListener {
+                                Log.d("Firebase", "User1 data written successfully")
+                            }
+                            .addOnFailureListener { exception ->
+                                Log.e("Firebase", "Failed to write user1 data", exception)
+                            }
 
                         val intent = Intent(this, MainActivity::class.java)
                         intent.putExtra("userCurrentMail", mail)

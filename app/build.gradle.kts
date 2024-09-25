@@ -5,6 +5,9 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.map.secret)
     alias(libs.plugins.google.gms.google.services)
+
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 val localProperties = Properties()
@@ -68,12 +71,23 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-
+    //dagger hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 
     //maps
     implementation (libs.play.services.maps)
+
+    //retrofit and gson converter
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+}
+
+kapt {
+    correctErrorTypes = true
 }

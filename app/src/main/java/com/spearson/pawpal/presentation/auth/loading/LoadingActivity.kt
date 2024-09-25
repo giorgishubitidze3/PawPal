@@ -14,7 +14,9 @@ import com.google.firebase.auth.auth
 import com.spearson.pawpal.MainActivity
 import com.spearson.pawpal.R
 import com.spearson.pawpal.presentation.auth.signIn.SignInActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoadingActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
