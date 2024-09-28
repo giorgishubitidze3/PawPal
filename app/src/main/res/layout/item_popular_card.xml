@@ -20,6 +20,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/img_popular_card"
                 android:scaleType="centerCrop"
                 tools:src="@drawable/ic_launcher_background"
                 android:layout_width="match_parent"
@@ -40,7 +41,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_popular_name"
                     android:textSize="18sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -50,16 +51,17 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_popular_species"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:text="(species)"
-                    app:layout_constraintBottom_toTopOf="@+id/tv_info"
-                    app:layout_constraintStart_toEndOf="@id/tv_name"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_popular_info"
+                    app:layout_constraintStart_toEndOf="@id/tv_popular_name"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_info"
+                    android:id="@+id/tv_popular_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -69,7 +71,7 @@
                     android:background="@drawable/shape_pill"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_popular_name" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

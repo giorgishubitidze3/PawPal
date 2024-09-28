@@ -12,12 +12,15 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.spearson.pawpal.R
 import com.spearson.pawpal.databinding.FragmentProfileBinding
+import com.spearson.pawpal.domain.repository.FirebaseService
 import com.spearson.pawpal.presentation.auth.signIn.SignInActivity
 import com.spearson.pawpal.presentation.util.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ProfileFragment : Fragment() {
+
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentProfileBinding
