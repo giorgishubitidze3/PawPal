@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.profile.create_pal.pal_map.PalMapFragment">
+
+    <ImageView
+        android:id="@+id/pal_map_marker"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_location_pal_map"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/pal_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</FrameLayout>

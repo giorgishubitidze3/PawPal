@@ -40,5 +40,22 @@
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_palMapFragment"
+            app:destination="@id/palMapFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/palMapFragment"
+        android:name="com.spearson.pawpal.presentation.profile.create_pal.pal_map.PalMapFragment"
+        android:label="fragment_pal_map"
+        tools:layout="@layout/fragment_pal_map" >
+        <action
+            android:id="@+id/action_palMapFragment_to_palDetailsFragment"
+            app:destination="@id/palDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/palDetailsFragment"
+        android:name="com.spearson.pawpal.presentation.profile.create_pal.pal_details.PalDetailsFragment"
+        android:label="fragment_pal_details"
+        tools:layout="@layout/fragment_pal_details" />
 </navigation>

@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -43,6 +45,8 @@ class ProfileFragment : Fragment() {
         auth = Firebase.auth
         auth.currentUser?.let { viewModel.fetchUser(it.uid) }
 
+        val navController = activity?.findNavController(R.id.fragment_container)
+
         binding.btnSignOut.setOnClickListener {
             auth.signOut()
 
@@ -60,6 +64,11 @@ class ProfileFragment : Fragment() {
         }
 
 
+        view.findViewById<Button>(R.id.btn_add_post).setOnClickListener {
+            if (navController != null) {
+                navController.navigate(R.id.palMapFragment)
+            }
+        }
     }
 
 

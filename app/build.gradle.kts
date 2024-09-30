@@ -90,6 +90,12 @@ dependencies {
 
     //glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    //easy permissions
+    implementation ("com.vmadalin:easypermissions-ktx:1.0.0")
+
+    //location
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
 }
 
 kapt {

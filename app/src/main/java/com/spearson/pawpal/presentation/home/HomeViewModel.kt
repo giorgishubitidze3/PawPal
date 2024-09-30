@@ -32,6 +32,7 @@ class HomeViewModel @Inject constructor(
         }
     }
 
+    //TODO work on get pal after setting up pal creation
     fun getPal(id: String){
         viewModelScope.launch{
 
